@@ -1,0 +1,1 @@
+keymap -c generate-keymap-svg/hillside.keymap.config.yaml parse -z ./config/hillside46.keymap > generate-keymap-svg/hillside.generated.keymap.yaml && keymap -c generate-keymap-svg/hillside.keymap.config.yaml draw generate-keymap-svg/hillside.generated.keymap.yaml > ./assets/hillside.svg
