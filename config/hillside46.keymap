@@ -145,8 +145,8 @@
     media_layer { // layer 3 (media)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │  PASTE   │  MEDIA  │SHOWAPPS │MOVELEFT │MOVERGHT │  SHOT   │                                 │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   LOCK  │
-      BPSTE        ___    SHOWAPPS  MOVELEFT  MOVERGHT   SCRSHT                                        _x_       _x_       _x_       _x_       _x_       LOCK
+//  │  PASTE   │  MEDIA  │SHOWAPPS │MOVELEFT │MOVERGHT │  SHOT   │                                 │   NOP   │   NOP   │   NOP   │   NOP   │   LOCK  │   NOP   │
+      BPSTE        ___    SHOWAPPS  MOVELEFT  MOVERGHT   SCRSHT                                        _x_       _x_       _x_       _x_       LOCK      _x_
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
 //  │   COPY   │   NOP   │   NOP   │   NOP   │   NOP   │ MEETING │                                 │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
        BCPY        _x_       _x_       _x_       _x_     MEETING                                       _x_       _x_       _x_       _x_       _x_       _x_    
