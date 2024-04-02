@@ -32,21 +32,21 @@ layers:
   - V
   - B
   - Screenshot
-  - $$mdi:alpha-w-box$$
+  - Meeting
   - N
   - M
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - /
   - $$mdi:apple-keyboard-caps$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Sticky ⇧, h: '$$mdi:keyboard-space$$'}
-  - {t: '$$mdi:backspace$$', h: number}
+  - $$mdi:undo-variant$$
+  - {t: '$$mdi:backspace$$', h: '$$mdi:keyboard-space$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: number}
   - {t: '$$mdi:keyboard-tab$$', h: ⇧}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant-outline$$'}
+  - {t: '$$mdi:keyboard-space$$', h: navigation}
   - {t: '$$mdi:backspace-outline$$', h: Rmv Word}
   - {t: Sticky CMD, h: '$$mdi:function-variant$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:redo$$
   number:
   - $$mdi:content-paste$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -54,7 +54,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:alpha-w-box$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -79,7 +79,7 @@ layers:
   - '3'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Screenshot
-  - $$mdi:alpha-w-box$$
+  - Meeting
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: ',', s: ;}
@@ -126,7 +126,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Screenshot
-  - $$mdi:alpha-w-box$$
+  - Meeting
   - HOME
   - PG DN
   - PG UP
@@ -137,7 +137,7 @@ layers:
   - ⇧+↵
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -194,7 +194,7 @@ layers:
   - F7
   - F8
   - F9
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:alpha-w-box$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}

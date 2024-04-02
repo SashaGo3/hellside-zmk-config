@@ -69,9 +69,6 @@
 <svg id="mdi:minus-circle-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-minus-circle-outline" viewBox="0 0 24 24"><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7" /></svg>
 </svg>
-<svg id="mdi:navigation-variant-outline">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-navigation-variant-outline" viewBox="0 0 24 24"><path d="M17.27 6.73L13.03 16.86L11.71 13.44L11.39 12.61L10.57 12.29L7.14 10.96L17.27 6.73M21 3L3 10.53V11.5L9.84 14.16L12.5 21H13.46L21 3Z" /></svg>
-</svg>
 <svg id="mdi:redo">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-redo" viewBox="0 0 24 24"><path d="M18.4,10.6C16.55,9 14.15,8 11.5,8C6.85,8 2.92,11.03 1.54,15.22L3.9,16C4.95,12.81 7.95,10.5 11.5,10.5C13.45,10.5 15.23,11.22 16.62,12.38L13,16H22V7L18.4,10.6Z" /></svg>
 </svg>
@@ -486,7 +483,7 @@ path.combo {
 </g>
 <g transform="translate(736, 270)" class="key keypos-31">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:alpha-w-box"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">Meeting</tspan></text>
 </g>
 <g transform="translate(816, 234)" class="key keypos-32">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -514,20 +511,18 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:apple-keyboard-caps"/>
 </g>
-<g transform="translate(336, 302)" class="key none keypos-38">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(336, 302)" class="key keypos-38">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:undo-variant" xlink:href="#mdi:undo-variant" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:undo-variant"/>
 </g>
 <g transform="translate(416, 314)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.0em" style="font-size: 83%">Sticky</tspan><tspan x="0" dy="1.0em" style="font-size: 83%">⇧</tspan>
-</text>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:backspace"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-9" y="16" height="18" width="18.0" class="key hold glyph mdi:keyboard-space"/>
 </g>
 <g transform="translate(496, 350)" class="key keypos-40">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:backspace"/>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:apple-keyboard-shift"/>
 <text x="0" y="34" class="key hold"><tspan style="font-size: 83%">number</tspan></text>
 </g>
 <g transform="translate(576, 395)" class="key keypos-41">
@@ -538,7 +533,7 @@ path.combo {
 <g transform="translate(696, 395)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:keyboard-space"/>
-<use href="#mdi:navigation-variant-outline" xlink:href="#mdi:navigation-variant-outline" x="-9" y="16" height="18" width="18.0" class="key hold glyph mdi:navigation-variant-outline"/>
+<text x="0" y="34" class="key hold"><tspan style="font-size: 60%">navigation</tspan></text>
 </g>
 <g transform="translate(776, 350)" class="key keypos-43">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -552,9 +547,9 @@ path.combo {
 </text>
 <use href="#mdi:function-variant" xlink:href="#mdi:function-variant" x="-9" y="16" height="18" width="18.0" class="key hold glyph mdi:function-variant"/>
 </g>
-<g transform="translate(936, 302)" class="key none keypos-45">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(936, 302)" class="key keypos-45">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:redo" xlink:href="#mdi:redo" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:redo"/>
 </g>
 <g class="combo combopos-0">
 <path d="M636,74 l-153,0" class="combo"/>
@@ -718,9 +713,9 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">0</text>
 </g>
-<g transform="translate(816, 74)" class="key none keypos-6">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(816, 74)" class="key keypos-6">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:alpha-w-box"/>
 </g>
 <g transform="translate(896, 62)" class="key none keypos-7">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
@@ -822,7 +817,7 @@ path.combo {
 </g>
 <g transform="translate(736, 270)" class="key keypos-31">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:alpha-w-box"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">Meeting</tspan></text>
 </g>
 <g transform="translate(816, 234)" class="key none keypos-32">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
@@ -1014,7 +1009,7 @@ path.combo {
 </g>
 <g transform="translate(736, 270)" class="key keypos-31">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:alpha-w-box"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">Meeting</tspan></text>
 </g>
 <g transform="translate(816, 234)" class="key keypos-32">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1060,9 +1055,8 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:keyboard-space"/>
 </g>
-<g transform="translate(696, 395)" class="key trans keypos-42">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(696, 395)" class="key held keypos-42">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held"/>
 </g>
 <g transform="translate(776, 350)" class="key none keypos-43">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
@@ -1293,9 +1287,9 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">F9</text>
 </g>
-<g transform="translate(456, 74)" class="key none keypos-5">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(456, 74)" class="key keypos-5">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:alpha-w-box"/>
 </g>
 <g transform="translate(816, 74)" class="key none keypos-6">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
