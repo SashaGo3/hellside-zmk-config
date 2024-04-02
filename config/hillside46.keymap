@@ -102,17 +102,17 @@
     number_layer { // layer 1 (numbers)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │  PASTE   │   NOP   │    7    │    8    │    9    │    0    │                                 │&caps_word│   NOP   │   NOP   │   NOP   │   NOP   │   NOP  │
-      BPSTE        _x_    &kp N7    &kp N8    &kp N9    &kp N0                                      &caps_word    _x_       _x_       _x_       _x_       _x_
+//  │    NOP   │    0    │    7    │    8    │    9    │   NOP   │                                 │&caps_word│   NOP   │   NOP   │   NOP   │   NOP   │   NOP  │
+         _x_   &kp N0    &kp N7    &kp N8    &kp N9        _x_                                      &caps_word    _x_       _x_       _x_       _x_       _x_
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   COPY   │   ,/;   │    4    │    5    │    6    │   ./:   │                                 │    =    │    +    │    -    │    *    │    /    │   NOP   │
-       BCPY    &cma_smi  &kp N4    &kp N5    &kp N6    &dot_cln                                    &kp EQUAL &kp PLUS  &kp MINUS &kp STAR  &kp FSLH      _x_    
+//  │   NOP    │   NOP   │    4    │    5    │    6    │   NOP   │                                 │    =    │    +    │    -    │    *    │    /    │   NOP   │
+        _x_        _x_   &kp N4    &kp N5    &kp N6        _x_                                     &kp EQUAL &kp PLUS  &kp MINUS &kp STAR  &kp FSLH      _x_    
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤   ╭─────────╮     ╭─────────╮   ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   CUT    │   NOP   │   1     │    2    │    3    │   NOP   │      LKNOB           RKNOB      │   NOP   │   NOP   │   ,/;   │   ./:   │    /    │   NOP   │
-        BCUT       _x_     &kp N1     &kp N2    &kp N3     _x_         SCRSHT          MEETING         _x_       _x_    &cma_smi  &dot_cln   &kp FSLH    _x_
+//  │   NOP    │   NOP   │   1     │    2    │    3    │   NOP   │      LKNOB           RKNOB      │   NOP   │   NOP   │   ,/;   │   ./:   │    /    │   NOP   │
+        _x_        _x_  &kp N1     &kp N2    &kp N3        _x_         SCRSHT          MEETING         _x_       _x_    &cma_smi  &dot_cln   &kp FSLH    _x_
 //  ├──────────╰─────────┼─────────┼─────────┼─────────┼─────────┼   ╰─────────╯     ╰─────────╯   ┼─────────┼─────────┼─────────┼─────────┼───────────────────╯
-//             │   NOP   │   NOP   │   NUM   │   NOP   │                                           │  SPACE  │ Delete  │  ENTER  │   NOP   │
-                   _x_       _x_       ___       _x_                                                &kp SPACE &kp DEL   &kp RET    _x_
+//             │   NOP   │   NOP   │   NUM   │   NOP   │                                           │  SPACE  │ BSPC    │  ENTER  │  Delete │
+                   _x_       _x_       ___       _x_                                                &kp SPACE &kp BSPC   &kp RET    &kp DEL
 //             ╰───────────────────────────────────────╯                                           ╰───────────────────────────────────────╯
       >;
 

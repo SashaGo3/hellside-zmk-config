@@ -48,31 +48,31 @@ layers:
   - {t: Sticky CMD, h: '$$mdi:function-variant$$'}
   - $$mdi:redo$$
   number:
-  - $$mdi:content-paste$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '0'
   - '7'
   - '8'
   - '9'
-  - '0'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:content-copy$$
-  - {t: ',', s: ;}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '4'
   - '5'
   - '6'
-  - {t: ., s: ':'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '='
   - +
   - '-'
   - '*'
   - /
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:content-cut$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '1'
   - '2'
@@ -91,9 +91,9 @@ layers:
   - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:backspace-reverse-outline$$
   navigation:
   - $$mdi:content-paste$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
