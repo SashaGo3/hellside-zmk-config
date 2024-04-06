@@ -44,47 +44,47 @@ layers:
   - {t: '$$mdi:apple-keyboard-shift$$', h: number}
   - {t: '$$mdi:keyboard-tab$$', h: ⇧}
   - {t: '$$mdi:keyboard-space$$', h: navigation}
-  - {t: '$$mdi:backspace-outline$$', h: Rmv Word}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: Sticky CMD, h: '$$mdi:function-variant$$'}
   - $$mdi:redo$$
   number:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '0'
+  - '6'
   - '7'
   - '8'
   - '9'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '0'
   - $$mdi:alpha-w-box$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '4'
-  - '5'
   - '6'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '='
-  - +
-  - '-'
-  - '*'
-  - /
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '1'
   - '2'
   - '3'
+  - '4'
+  - '5'
+  - LA(BSPC)
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Screenshot
   - Meeting
+  - LA(DEL)
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - /
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -101,11 +101,11 @@ layers:
   - ⌃+←
   - ⌃+→
   - Meeting
-  - $$mdi:undo-variant$$
-  - $$mdi:content-cut$$
-  - $$mdi:content-copy$$
-  - $$mdi:content-paste$$
-  - $$mdi:redo$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:content-copy$$
   - $$mdi:apple-keyboard-command$$
@@ -134,7 +134,7 @@ layers:
   - INS
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ⇧+↵
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
   - {type: held}
