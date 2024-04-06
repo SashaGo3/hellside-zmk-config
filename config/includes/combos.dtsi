@@ -111,7 +111,7 @@ ZMK_COMBO(r_square, &kp RBKT, RM2 RM3, DEF)
   ╭─────────────────────────┬─────────────────────────╮
   │ LT4 LT3 LT2 LT1 LT0     │     RT0 RT1 RT2 RT3 RT4 │
   │ LM4 LM3 LM2 LM1 LM0     │     RM0 RM1 RM2 RM3 RM4 │
-  │ LB4 -<ESC>- LB1 LB0     │     RB0 RB1 -<ENT>- RB4 │
+  │ LB4 -<ESC>- LB1 LB0     │     RB0 RB1 -<:>- RB4 │
   ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
               ╰─────────────┴─────────────╯
 */
@@ -119,7 +119,7 @@ ZMK_COMBO(r_square, &kp RBKT, RM2 RM3, DEF)
 // make prior idle smaller, these are mapped to
 // ,/. and x/c which are not normally hit in order
 ZMK_COMBO(esc, &kp ESC, LB3 LB2, DEF, COMBO_TERM_SLOWER, 0)
-ZMK_COMBO(ent, &kp RET, RB2 RB3, DEF, COMBO_TERM_SLOWER, 0)
+ZMK_COMBO(ent, &kp LS(SEMI), RB2 RB3, DEF, COMBO_TERM_SLOWER, 0)
 
 /*
   ╭─────────────────────────┬─────────────────────────╮

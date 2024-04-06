@@ -23,25 +23,20 @@
 #include "includes/combos.dtsi"
 #include "includes/behaviors.dtsi"
 
-// ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-//           │QUA THUMB│SEC THMB │PRM THMB │TER THMB │   │TER THMB │PRM THMB │SEC THMB │QUA THUMB│
-//      hold │   none  │   Space │  NUM    │ Shift   │   │  NAV    │Alt+BSPC │  FUN    │   none  │
-//       tap │   undo  │   BSPC  │ SK SHFT │  Tab    │   │  SPACE  │  BSPC   │ SK CMD  │   redo  │
-//           ╰───────────────────────────────────────╯   ╰───────────────────────────────────────╯
 
 
-// Thumb default         hold     tap
-#define SECLTHMB  &mt    SPACE    BSPC  
-#define PRMLTHMB  &ltsk  NUM      LSHFT  
-#define TERLTHMB  &mt    LSHFT    TAB
 
-#define TERRTHMB  &ltr   NAV     SPACE
-#define PRMRTHMB  &kp    BSPC   // tap gives you Backspace 
-#define SECRTHMB  &ltsk  FUN      LGUI //  tap for sticky command : hold for function layer
 
-// Hold taps
-// hold or tap
-#define MEDIA_Q  &ltr MEDIA  Q
+
+// Layers toggles       hold     tap
+#define MEDIA_Q  &ltr   MEDIA    Q
+#define SP_NAV   &ltr   NAV      SPACE
+#define COM_FUN  &ltsk  FUN      LGUI   // sticky
+#define SHFT_NUM &ltsk  NUM      LSHFT  // sticky
+
+// Mod taps              hold     tap
+#define BSPC_SP   &mt    SPACE    BSPC  
+#define TAB_SHFT  &mt    LSHFT    TAB
 
 
 // shorter codes
@@ -74,6 +69,24 @@
 #define HRML(k1, k2, k3, k4) &hml LGUI  k1  &hml LALT  k2 &hml LCTRL k3 &hml LSHFT k4
 #define HRMR(k1, k2, k3, k4) &hmr RSHFT k1  &hmr RCTRL k2 &hmr RALT  k3 &hmr RGUI  k4
 
+// 5 Rows
+#define NUMBER_TOP_ROW___________________________________  &kp N5    &kp N6    &kp N7    &kp N8    &kp N9   
+#define NUMBER_BOTTOM_ROW________________________________  &kp N1    &kp N2    &kp N3    &kp N4    &kp N0
+#define NOP______________________________________________    _x_       _x_       _x_       _x_       _x_  
+#define PAGE_CONTROL_ROW_________________________________  &kp HOME  &kp PG_DN &kp PG_UP  &kp END  &kp INS    
+
+// 4 Rows
+#define NAVIGATION_____________________________            &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  
+#define LEFT_ACTIONS___________________________            &kp LGUI  &kp LALT   &kp LCTRL &kp LSHFT 
+#define RIGHT_ACTIONS__________________________            &kp RSHFT &kp RCTRL  &kp RALT  &kp RGUI
+#define DESKTOP_ACTIONS________________________            SHOWAPPS  MOVELEFT  MOVERGHT   SCRSHT   
+
+// 3 Rows
+#define VOLUME_CONTROL_______________                      BVOLD     BMUTE     BVOLU  
+#define PLAY_CONTROL_________________                      BPREV    BPLYPSE    BNEXT     
+
+
+
 
 
 / {
@@ -82,17 +95,16 @@
     default_layer { // layer 0 (default)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │  PASTE   │    Q    │    W    │    E    │    R    │    T    │                                 │    Y    │    U    │    I    │    O    │    P    │   NOP   │
+//  │  PASTE   │    Q    │    W    │    E    │    R    │    T    │                                 │    Y    │    U    │    I    │    O    │    P    │         │
       BPSTE      MEDIA_Q  &kp W     &kp E     &kp R     &kp T                                       &kp Y     &kp U     &kp I     &kp O     &kp P        _x_
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   COPY   │    A    │    S    │    D    │    F    │    G    │                                 │    H    │    J    │    K    │    L    │    '    │   NOP   │
+//  │   COPY   │    A    │    S    │    D    │    F    │    G    │                                 │    H    │    J    │    K    │    L    │    '    │         │
        BCPY    HRML(A,        S,        D,        F)    &kp G                                       &kp H    HRMR(J,        K,        L,       SQT)      _x_    
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤   ╭─────────╮     ╭─────────╮   ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
 //  │   CUT    │    Z    │    X    │    C    │    V    │    B    │      LKNOB           RKNOB      │    N    │    M    │   ,/;   │   ./:   │    /    │CAPSLOCK │
         BCUT    &kp Z     &kp X     &kp C     &kp V     &kp B          SCRSHT          MEETING      &kp N     &kp M     &cma_smi  &dot_cln  &kp FSLH &kp CAPSLOCK
 //  ├──────────╰─────────┼─────────┼─────────┼─────────┼─────────┼   ╰─────────╯     ╰─────────╯   ┼─────────┼─────────┼─────────┼─────────┼───────────────────╯
-//             │QUALTHMB │SEC THMB │PRM THMB │TER THMB │                                           │TER THMB │PRM THMB │SEC THMB │QUARTHMB │
-                BUNDO     SECLTHMB  PRMLTHMB  TERLTHMB                                              TERRTHMB  PRMRTHMB  SECRTHMB  BREDO
+                  BUNDO   BSPC_SP  SHFT_NUM  TAB_SHFT                                               SP_NAV  &kp BSPC    COM_FUN    BREDO
 //             ╰───────────────────────────────────────╯                                           ╰───────────────────────────────────────╯
       >;
 
@@ -103,17 +115,16 @@
     number_layer { // layer 1 (numbers)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │    NOP   │    6    │    7    │    8    │    9    │    0    │                                 │caps_word│    6    │    7    │    8    │    9    │    0    │ 
-         _x_   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0                                     &caps_word &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     
+//  │          │                                                 │                                 │         │                                                 │ 
+        _x_     NUMBER_TOP_ROW___________________________________                                      _x_    NUMBER_TOP_ROW___________________________________   
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   NOP    │    1    │    2    │    3    │    4    │    5    │                                 │BackWord │    1    │    2    │    3    │    4    │    5    │
-        _x_    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                   &kp LA(BSPC) &kp N1    &kp N2    &kp N3    &kp N4    &kp N5   
+//  │          │                                                 │                                 │         │                                                 │
+        _x_     NUMBER_BOTTOM_ROW________________________________                                      _x_    NUMBER_BOTTOM_ROW________________________________
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤   ╭─────────╮     ╭─────────╮   ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   NOP    │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │      LKNOB           RKNOB      │ForwWord │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-        _x_        _x_       _x_       _x_       _x_       _x_         SCRSHT          MEETING   &kp LA(DEL)     _x_       _x_       _x_       _x_       _x_   
+//  │          │                                                 │      LKNOB           RKNOB      │         │                                                 │
+    &caps_word  NOP______________________________________________        _x_             _x_           _x_    NOP______________________________________________
 //  ├──────────╰─────────┼─────────┼─────────┼─────────┼─────────┼   ╰─────────╯     ╰─────────╯   ┼─────────┼─────────┼─────────┼─────────┼───────────────────╯
-//             │   NOP   │   NOP   │   NUM   │   NOP   │                                           │  SPACE  │ BSPC    │  ENTER  │  Delete │
-                   _x_       _x_       ___       _x_                                                &kp SPACE &kp BSPC   &kp RET    &kp DEL
+                   _x_       _x_       ___       _x_                                             &kp SPACE  &kp BSPC    &kp DEL   &kp RSHFT
 //             ╰───────────────────────────────────────╯                                           ╰───────────────────────────────────────╯
       >;
 
@@ -125,16 +136,15 @@
   navigation_layer { // layer 2 (navigation)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │  PASTE   │   NOP   │SHOWAPPS │MOVELEFT │MOVERGHT │ MEETING │                                 │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-      BPSTE        _x_    SHOWAPPS  MOVELEFT  MOVERGHT   MEETING                                       _x_       _x_       _x_       _x_       _x_       _x_
+//  │  PASTE   │         │                                       │                                 │                                                 │         │
+      BPSTE        _x_    DESKTOP_ACTIONS________________________                                   NOP______________________________________________    _x_
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   COPY   │   CMD   │   ALT   │   CTRL  │  SHIFT  │   NOP   │                                 │  LEFT   │  DOWN   │    UP   │  RIGHT  │   NOP   │   NOP   │
-       BCPY   &kp LGUI  &kp LALT   &kp LCTRL &kp LSHFT     _x_                                    &kp LEFT  &kp DOWN    &kp UP  &kp RIGHT      _x_       _x_    
+//  │   COPY   │                                       │         │                                 │                                       │         │         │
+       BCPY     LEFT_ACTIONS___________________________   _x_                                       NAVIGATION_____________________________    _x_       _x_    
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤   ╭─────────╮     ╭─────────╮   ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   CUT    │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │      LKNOB           RKNOB      │  HOME   │  PGDN   │   PGUP  │   END   │  INSERT │   NOP   │
-        BCUT       _x_       _x_       _x_       _x_       _x_         SCRSHT          MEETING    &kp HOME  &kp PG_DN &kp PG_UP  &kp END  &kp INS        _x_
+//  │   CUT    │                                                 │      LKNOB           RKNOB      │                                                 │         │
+        BCUT    NOP______________________________________________        _x_             _x_        PAGE_CONTROL_ROW_________________________________   _x_
 //  ├──────────╰─────────┼─────────┼─────────┼─────────┼─────────┼   ╰─────────╯     ╰─────────╯   ┼─────────┼─────────┼─────────┼─────────┼───────────────────╯
-//             │   NOP   │ Delete  │  BSPC   │  SPACE  │                                           │   NAV   │   NOP   │   NOP   │   NOP   │
                    _x_    &kp DEL  &kp BSPC &kp SPACE                                                  ___       _x_       _x_       _x_
 //             ╰───────────────────────────────────────╯                                           ╰───────────────────────────────────────╯
       >;
@@ -146,17 +156,17 @@
     media_layer { // layer 3 (media)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │  PASTE   │  MEDIA  │SHOWAPPS │MOVELEFT │MOVERGHT │  SHOT   │                                 │ BluUsb  │   NOP   │   NOP   │   NOP   │   LOCK  │   NOP   │
-      BPSTE        ___    SHOWAPPS  MOVELEFT  MOVERGHT   SCRSHT                                 &out OUT_TOG     _x_       _x_       _x_       LOCK      _x_
+//  │          │  MEDIA  │                                       │                                 │                                                 │   LOCK  │
+        _x_        ___    DESKTOP_ACTIONS________________________                                   NOP______________________________________________    LOCK
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   COPY   │   NOP   │   NOP   │   NOP   │   NOP   │ MEETING │                                 │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-       BCPY        _x_       _x_       _x_       _x_     MEETING                                       _x_       _x_       _x_       _x_       _x_       _x_    
+//  │          │                                                 │                                 │                                                 │         │
+        _x_     NOP______________________________________________                                   NOP______________________________________________    _x_    
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤   ╭─────────╮     ╭─────────╮   ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   CUT    │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │      LKNOB           RKNOB      │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-        BCUT       _x_       _x_       _x_       _x_       _x_          BVOLD          MEETING         _x_       _x_       _x_       _x_       _x_       _x_
+//  │          │                                                 │      LKNOB           RKNOB      │                                                 │ BluUsb  │
+        _x_     NOP______________________________________________       BVOLD           LOCK        NOP______________________________________________ &out OUT_TOG
 //  ├──────────╰─────────┼─────────┼─────────┼─────────┼─────────┼   ╰─────────╯     ╰─────────╯   ┼─────────┼─────────┼─────────┼─────────┼───────────────────╯
-//             │   NOP   │PREV_TRCK│Paus/Play│NEXT_TRCK│                                           │VOl_DOWN │  MUTE   │  VOL_UP │   NOP   │
-                   _x_     BPREV    BPLYPSE    BNEXT                                                  BVOLD     BMUTE     BVOLU    _x_
+//             │         │                             │                                           │                             │         │
+                   _x_    PLAY_CONTROL_________________                                             VOLUME_CONTROL_______________    _x_
 //             ╰───────────────────────────────────────╯                                           ╰───────────────────────────────────────╯
       >;
 
@@ -166,17 +176,16 @@
     function_layer { // layer 4 (function)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │  PASTE   │   F12   │   F7    │   F8    │   F9    │caps word│                                 │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-      BPSTE    &kp F12   &kp F7    &kp F8    &kp F9     &caps_word                                     _x_       _x_       _x_       _x_       _x_       _x_
+//  │  PASTE   │   F12   │   F7    │   F8    │   F9    │caps word│                                 │                                                 │         │
+      BPSTE    &kp F12   &kp F7    &kp F8    &kp F9     &caps_word                                  NOP______________________________________________    _x_
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   COPY   │   F11   │   F4    │   F5    │   F6    │   NOP   │                                 │   NOP   │  SHIFT  │  CTRL   │   ALT   │   CMD   │   NOP   │
-       BCPY    &kp F11   &kp F4    &kp F5    &kp F6        _x_                                         _x_  &kp RSHFT &kp RCTRL &kp RALT  &kp RGUI      _x_    
+//  │   COPY   │   F11   │   F4    │   F5    │   F6    │         │                                 │         │                                       │         │
+       BCPY    &kp F11   &kp F4    &kp F5    &kp F6        _x_                                         _x_    RIGHT_ACTIONS__________________________    _x_    
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤   ╭─────────╮     ╭─────────╮   ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
-//  │   CUT    │   F10   │   F1    │   F2    │   F3    │   NOP   │      LKNOB           RKNOB      │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │   NOP   │
-        BCUT   &kp F10   &kp F1    &kp F2    &kp F3        _x_          SCRSHT         MEETING         _x_       _x_       _x_       _x_       _x_       _x_
+//  │   CUT    │   F10   │   F1    │   F2    │   F3    │         │      LKNOB           RKNOB      │                                                 │         │
+        BCUT   &kp F10   &kp F1    &kp F2    &kp F3        _x_           _x_             _x_        NOP______________________________________________    _x_
 //  ├──────────╰─────────┼─────────┼─────────┼─────────┼─────────┼   ╰─────────╯     ╰─────────╯   ┼─────────┼─────────┼─────────┼─────────┼───────────────────╯
-//             │   NOP   │CAPSLOCK │  SPACE  │   TAB   │                                           │    NOP  │   NOP   │   FUN   │   NOP   │
-                   _x_ &kp CAPSLOCK &kp SPACE &kp TAB                                                   _x_       _x_       ___       _x_
+                _x_   &kp CAPSLOCK &kp SPACE &kp TAB                                                   _x_       _x_       ___       _x_
 //             ╰───────────────────────────────────────╯                                           ╰───────────────────────────────────────╯
       >;
 

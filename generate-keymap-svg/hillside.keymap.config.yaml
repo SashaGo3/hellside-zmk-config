@@ -303,12 +303,12 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
-    '&ext_power EP_TOG': "🔌"
+    "&ext_power EP_TOG": "🔌"
     "&caps_word": $$mdi:alpha-w-box$$
-    '&bootloader': "💾"
-    '&sys_reset': "🔄"
-    '&reset_td': "🔄"
-    '&dot_space_shift': ".⎵⇧"
+    "&bootloader": "💾"
+    "&sys_reset": "🔄"
+    "&reset_td": "🔄"
+    "&dot_space_shift": ".⎵⇧"
 
     "&ltsk SPACE LSHFT":
       tap: Sticky ⇧
@@ -332,7 +332,7 @@ parse_config:
 
     "&mt LA(BSPC) BSPC":
       tap: $$mdi:backspace-outline$$
-      hold: 'Rmv Word'
+      hold: "Rmv Word"
 
     # Bluetooth
     "&bt BT_SEL 0":
@@ -350,14 +350,14 @@ parse_config:
     "&bt BT_SEL 4":
       tap: $$mdi:bluetooth-connect$$
       hold: 4
-    '&bt BT_NXT':
+    "&bt BT_NXT":
       tap: $$mdi:bluetooth-connect$$
       hold: $$mdi:chevron-right$$
-    '&bt BT_PRV':
+    "&bt BT_PRV":
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
       hold: $$mdi:chevron-left$$
-    '&bt BT_CLR':
+    "&bt BT_CLR":
       tap: $$mdi:bluetooth-connect$$
       hold: $$mdi:close-box-outline$$
 
@@ -383,70 +383,70 @@ parse_config:
     type: trans
   mark_alternate_layer_activators: true
   zmk_keycode_map:
-    EXCLAMATION: '!'
-    EXCL: '!'
-    AT_SIGN: '@'
-    AT: '@'
-    HASH: '#'
-    POUND: '#'
+    EXCLAMATION: "!"
+    EXCL: "!"
+    AT_SIGN: "@"
+    AT: "@"
+    HASH: "#"
+    POUND: "#"
     DOLLAR: $
     DLLR: $
-    PERCENT: '%'
-    PRCNT: '%'
+    PERCENT: "%"
+    PRCNT: "%"
     CARET: ^
-    AMPERSAND: '&'
-    AMPS: '&'
-    ASTERISK: '*'
-    ASTRK: '*'
-    STAR: '*'
+    AMPERSAND: "&"
+    AMPS: "&"
+    ASTERISK: "*"
+    ASTRK: "*"
+    STAR: "*"
     LEFT_PARENTHESIS: (
     LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
-    EQUAL: '='
+    EQUAL: "="
     PLUS: +
-    MINUS: '-'
+    MINUS: "-"
     UNDERSCORE: _
     UNDER: _
     SLASH: /
     FSLH: /
-    QUESTION: '?'
-    QMARK: '?'
+    QUESTION: "?"
+    QMARK: "?"
     BACKSLASH: \
     BSLH: \
-    PIPE: '|'
+    PIPE: "|"
     NON_US_BACKSLASH: \
-    PIPE2: '|'
-    NON_US_BSLH: '|'
+    PIPE2: "|"
+    NON_US_BSLH: "|"
     SEMICOLON: ;
     SEMI: ;
-    COLON: ':'
-    SINGLE_QUOTE: ''''
-    SQT: ''''
+    COLON: ":"
+    SINGLE_QUOTE: "'"
+    SQT: "'"
     APOSTROPHE: <
     APOS: .
     DOUBLE_QUOTES: '"'
     DQT: '"'
-    COMMA: ','
+    COMMA: ","
     LESS_THAN: <
     LT: <
     PERIOD: .
     DOT: .
-    GREATER_THAN: '>'
-    GT: '>'
-    LEFT_BRACKET: '['
-    LBKT: '['
-    LEFT_BRACE: '{'
-    LBRC: '{'
-    RIGHT_BRACKET: ']'
-    RBKT: ']'
-    RIGHT_BRACE: '}'
-    RBRC: '}'
-    GRAVE: '`'
-    TILDE: '~'
-    NON_US_HASH: '#'
-    NUHS: '#'
-    TILDE2: '~'
+    GREATER_THAN: ">"
+    GT: ">"
+    LEFT_BRACKET: "["
+    LBKT: "["
+    LEFT_BRACE: "{"
+    LBRC: "{"
+    RIGHT_BRACKET: "]"
+    RBKT: "]"
+    RIGHT_BRACE: "}"
+    RBRC: "}"
+    GRAVE: "`"
+    TILDE: "~"
+    NON_US_HASH: "#"
+    NUHS: "#"
+    TILDE2: "~"
 
     # Modifiers
     LCTRL: $$mdi:apple-keyboard-control$$
@@ -532,5 +532,6 @@ parse_config:
     LC(RIGHT): "⌃+→"
     LS(LG(J)): "Meeting"
     LS(LG(N1)): "Screenshot"
+    LS(SEMI): ":"
 
   zmk_combos: {}
