@@ -533,5 +533,6 @@ parse_config:
     LS(LG(J)): "Meeting"
     LS(LG(N1)): "Screenshot"
     LS(SEMI): ":"
+    LG(SPACE): "⌘+␣"
 
   zmk_combos: {}

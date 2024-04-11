@@ -689,6 +689,14 @@ path.combo {
 <text x="979" y="56" class="combo tap">-&gt;</text>
 <text x="979" y="42" class="combo shifted">=&gt;</text>
 </g>
+<g class="combo combopos-31">
+<rect rx="4" ry="4" x="514" y="355" width="45" height="36" class="combo"/>
+<text x="536" y="373" class="combo tap">⌘+␣</text>
+</g>
+<g class="combo combopos-32">
+<rect rx="4" ry="4" x="714" y="355" width="45" height="36" class="combo"/>
+<text x="736" y="373" class="combo tap">⌘+␣</text>
+</g>
 </g>
 </g>
 <g transform="translate(0, 435)" class="layer-number">

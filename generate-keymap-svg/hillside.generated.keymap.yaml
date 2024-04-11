@@ -329,3 +329,9 @@ combos:
 - p: [7, 8, 9]
   k: {t: ->, s: =>}
   l: [default]
+- p: [40, 41]
+  k: ⌘+␣
+  l: [default]
+- p: [42, 43]
+  k: ⌘+␣
+  l: [default]
