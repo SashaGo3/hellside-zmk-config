@@ -30,6 +30,7 @@
 
 // Layers toggles       hold     tap
 #define MEDIA_Q  &ltr   MEDIA    Q
+#define MEDIA_P  &ltr   MEDIA    P
 #define SP_NAV   &ltr   NAV      SPACE
 #define COM_FUN  &ltsk  FUN      LGUI   // sticky
 #define SHFT_NUM &ltsk  NUM      LSHFT  // sticky
@@ -79,7 +80,10 @@
 #define NAVIGATION_____________________________            &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  
 #define LEFT_ACTIONS___________________________            &kp LGUI  &kp LALT   &kp LCTRL &kp LSHFT 
 #define RIGHT_ACTIONS__________________________            &kp RSHFT &kp RCTRL  &kp RALT  &kp RGUI
-#define DESKTOP_ACTIONS________________________            SHOWAPPS  MOVELEFT  MOVERGHT   SCRSHT   
+#define DESKTOP_ACTIONS________________________            SHOWAPPS  MOVELEFT  MOVERGHT   &kp LG(SPACE)
+#define LEFT_HOME_ROW__________________________            HRML(A,        S,        D,        F)
+#define RIGHT_HOME_ROW_________________________            HRMR(J,        K,        L,       SQT)
+#define NOP_4__________________________________            _x_         _x_       _x_       _x_
 
 // 3 Rows
 #define VOLUME_CONTROL_______________                      BVOLD     BMUTE     BVOLU  
@@ -96,10 +100,10 @@
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
 //  │  PASTE   │    Q    │    W    │    E    │    R    │    T    │                                 │    Y    │    U    │    I    │    O    │    P    │         │
-      BPSTE      MEDIA_Q  &kp W     &kp E     &kp R     &kp T                                       &kp Y     &kp U     &kp I     &kp O     &kp P        _x_
+      BPSTE      MEDIA_Q  &kp W     &kp E     &kp R     &kp T                                       &kp Y     &kp U     &kp I     &kp O      MEDIA_P     _x_
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
 //  │   COPY   │    A    │    S    │    D    │    F    │    G    │                                 │    H    │    J    │    K    │    L    │    '    │         │
-       BCPY    HRML(A,        S,        D,        F)    &kp G                                       &kp H    HRMR(J,        K,        L,       SQT)      _x_    
+       BCPY     LEFT_HOME_ROW__________________________ &kp G                                       &kp H     RIGHT_HOME_ROW_________________________    _x_    
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤   ╭─────────╮     ╭─────────╮   ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
 //  │   CUT    │    Z    │    X    │    C    │    V    │    B    │      LKNOB           RKNOB      │    N    │    M    │   ,/;   │   ./:   │    /    │CAPSLOCK │
         BCUT    &kp Z     &kp X     &kp C     &kp V     &kp B          SCRSHT          MEETING      &kp N     &kp M     &cma_smi  &dot_cln  &kp FSLH &kp CAPSLOCK
@@ -156,8 +160,8 @@
     media_layer { // layer 3 (media)
       bindings = <
 //  ╭──────────╭─────────────────────────────────────────────────╮                                 ╭───────────────────────────────────────────────────────────╮
-//  │          │  MEDIA  │                                       │                                 │                                                 │   LOCK  │
-        _x_        ___    DESKTOP_ACTIONS________________________                                   NOP______________________________________________    LOCK
+//  │          │  MEDIA  │                                       │                                 │                                       │  MEDIA  │   LOCK  │
+        _x_        ___    DESKTOP_ACTIONS________________________                                   NOP_4__________________________________    ___      LOCK
 //  ├──────────├─────────┼─────────┼─────────┼─────────┼─────────┤                                 ├─────────┼─────────┼─────────┼─────────┼─────────┤─────────┤
 //  │          │                                                 │                                 │                                                 │         │
         _x_     NOP______________________________________________                                   NOP______________________________________________    _x_    

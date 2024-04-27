@@ -11,7 +11,7 @@ layers:
   - U
   - I
   - O
-  - P
+  - {t: P, h: media}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:content-copy$$
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
@@ -100,7 +100,7 @@ layers:
   - Show apps
   - ⌃+←
   - ⌃+→
-  - Screenshot
+  - search
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -147,12 +147,12 @@ layers:
   - Show apps
   - ⌃+←
   - ⌃+→
-  - Screenshot
+  - search
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {type: held}
   - Lock
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -246,7 +246,10 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [default]
 - p: [41, 42]
-  k: .⎵⇧
+  k: search
+  l: [default]
+- p: [40, 43]
+  k: prev app
   l: [default]
 - p: [5, 4]
   k: _
@@ -328,10 +331,4 @@ combos:
   l: [default]
 - p: [7, 8, 9]
   k: {t: ->, s: =>}
-  l: [default]
-- p: [40, 41]
-  k: ⌘+␣
-  l: [default]
-- p: [42, 43]
-  k: ⌘+␣
   l: [default]
