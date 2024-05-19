@@ -2,7 +2,7 @@ layout: {qmk_keyboard: hillside/46/0_1}
 layers:
   default:
   - $$mdi:content-paste$$
-  - {t: Q, h: media}
+  - Q
   - W
   - E
   - R
@@ -11,9 +11,9 @@ layers:
   - U
   - I
   - O
-  - {t: P, h: media}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:content-copy$$
+  - P
+  - ;
+  - {t: '$$mdi:content-copy$$', h: media}
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -24,7 +24,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '''', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '[', h: media}
   - $$mdi:content-cut$$
   - Z
   - X
@@ -32,13 +32,13 @@ layers:
   - V
   - B
   - Screenshot
-  - Meeting
+  - $$mdi:apple-keyboard-caps$$
   - N
   - M
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - /
-  - $$mdi:apple-keyboard-caps$$
+  - ']'
   - $$mdi:undo-variant$$
   - {t: '$$mdi:backspace$$', h: '$$mdi:keyboard-space$$'}
   - {t: '$$mdi:apple-keyboard-shift$$', h: number}
@@ -49,41 +49,41 @@ layers:
   - $$mdi:redo$$
   number:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '5'
-  - '6'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '7'
   - '8'
   - '9'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '5'
-  - '6'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '7'
   - '8'
   - '9'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '0'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '0'
+  - '4'
+  - '5'
+  - '6'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '1'
+  - '2'
+  - '3'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '1'
+  - '2'
+  - '3'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -142,17 +142,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   media:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {type: held}
-  - Show apps
-  - ⌃+←
-  - ⌃+→
-  - search
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {type: held}
   - Lock
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -164,8 +153,19 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Lock
+  - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Show apps
+  - ⌃+←
+  - ⌃+→
+  - search
+  - Show apps
+  - ⌃+←
+  - ⌃+→
+  - search
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -189,7 +189,7 @@ layers:
   - $$mdi:volume-high$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   function:
-  - $$mdi:content-paste$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
   - F7
   - F8
@@ -201,7 +201,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:content-copy$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F11
   - F4
   - F5
@@ -213,7 +213,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:content-cut$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F10
   - F1
   - F2
